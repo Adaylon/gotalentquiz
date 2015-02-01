@@ -10,7 +10,9 @@ $title = isset($quiz) ? 'Go Talent Quiz :: ' . $quiz->getName() : 'Iron Geek';
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="<?php echo $root; ?>/res/bootstrap/dist/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="<?php echo $root; ?>/res/css/quiz.css" />
+	<link rel="shortcut icon" href="http://www.gotalent.com.br/_imagens/favicon.ico" type="image/x-icon" />
     <title><?php echo $title; ?></title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700' rel='stylesheet' type='text/css' />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="<?php echo $root; ?>/res/bootstrap/dist/assets/js/html5shiv.js"></script>

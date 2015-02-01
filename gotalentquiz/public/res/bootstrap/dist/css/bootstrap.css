@@ -300,7 +300,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -462,9 +462,11 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
+  color:#29abe2 !important;
+  cursor: default
 }
 
 h1 small,
@@ -1417,6 +1419,7 @@ th {
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
+  font-size:18px
 }
 
 .table thead > tr > th {
@@ -1564,6 +1567,22 @@ table th[class*="col-"] {
 .table > tfoot > tr.warning > th {
   background-color: #fcf8e3;
   border-color: #fbeed5;
+}
+
+.table > thead > tr > td.nowin,
+.table > tbody > tr > td.nowin,
+.table > tfoot > tr > td.nowin,
+.table > thead > tr > th.nowin,
+.table > tbody > tr > th.nowin,
+.table > tfoot > tr > th.nowin,
+.table > thead > tr.nowin > td,
+.table > tbody > tr.nowin > td,
+.table > tfoot > tr.nowin > td,
+.table > thead > tr.nowin > th,
+.table > tbody > tr.nowin > th,
+.table > tfoot > tr.nowin > th {
+  background-color: #f4f4f4;
+  border-color: #ccc;
 }
 
 .table-hover > tbody > tr > td.warning:hover,
@@ -4916,23 +4935,32 @@ a.list-group-item.active > .badge,
   margin-left: 3px;
 }
 
-.jumbotron {
-  padding: 30px;
+.jumbotron{
+  padding: 0px !important;
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
 }
 
 .jumbotron h1 {
-  line-height: 1;
-  color: inherit;
+  line-height: 1;  
+  border-bottom:1px solid #ccc;
+  padding-bottom:15px
 }
 
+.jumbotron h2 {
+  margin-top:60px;
+  }
+  
 .jumbotron p {
   line-height: 1.4;
+  font-size: 15px;
+  cursor:default
+}
+.jumbotron ul {
+  padding: 0;
 }
 
 .container .jumbotron {
@@ -4941,8 +4969,8 @@ a.list-group-item.active > .badge,
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    /*padding-top: 48px;
+    padding-bottom: 48px;*/
   }
   .container .jumbotron {
     padding-right: 60px;
@@ -6802,4 +6830,3 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
-}
