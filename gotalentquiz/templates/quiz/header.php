@@ -2,7 +2,7 @@
 //echo '<pre>';
 //print_r($_SESSION);
 //echo '</pre>';
-$title = isset($quiz) ? 'Go Talent Quiz :: ' . $quiz->getName() : 'Iron Geek';
+$title = 'Iron Geek';
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +31,7 @@ $title = isset($quiz) ? 'Go Talent Quiz :: ' . $quiz->getName() : 'Iron Geek';
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="<?php echo $root; ?>/">
-		  <img src="<?php echo $root; ?>/images/logo.png"/></a>
+		  <img src="<?php echo $root; ?>/images/logo.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $root; ?>/images/logo-cpbr.png"/></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

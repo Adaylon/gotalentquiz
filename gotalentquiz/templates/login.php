@@ -28,8 +28,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-                    <a class="navbar-brand" href="<?php echo $root; ?>/">
-		  <img src="<?php echo $root; ?>/images/logo.png"/></a>
+          <a class="navbar-brand" href="<?php echo $root; ?>/">
+		  <img src="<?php echo $root; ?>/images/logo.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $root; ?>/images/logo-cpbr.png"/></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

@@ -243,7 +243,7 @@ $app->post('/quiz/process/', $authenticate($app), function () use ($app) {
     {
         if ($simple->quizUserExists($id, $session->get('user')->getId()))
         {
-            $app->flash('quizerror', "You've already taken this quiz");
+            $app->flash('quizerror', "Você já participou desse Quiz!");
             $app->redirect($app->request->getRootUri() . '/quiz/' . $id);
         }
         $session->set('score', 0);

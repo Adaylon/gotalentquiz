@@ -1,10 +1,17 @@
-<!DOCTYPE html>
+<?php
+//echo '<pre>';
+//print_r($_SESSION);
+//echo '</pre>';
+$title = 'Iron Geek';
+?><!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="<?php echo $root; ?>/res/bootstrap/dist/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="<?php echo $root; ?>/res/css/quiz.css" />
-    <title>Go Talent</title>
+    <link rel="shortcut icon" href="http://www.gotalent.com.br/_imagens/favicon.ico" type="image/x-icon" />
+    <title><?php echo $title; ?></title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700' rel='stylesheet' type='text/css' />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="<?php echo $root; ?>/res/bootstrap/dist/assets/js/html5shiv.js"></script>
@@ -23,7 +30,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="<?php echo $root; ?>/">
-		  <img src="<?php echo $root; ?>/images/logo.png"/></a>
+		  <img src="<?php echo $root; ?>/images/logo.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $root; ?>/images/logo-cpbr.png"/></a>
         </div>
         <div class="navbar-collapse collapse">
             
