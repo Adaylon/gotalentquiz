@@ -102,7 +102,7 @@
 			Difícil: 90<br>
 			Extra: 20</p><br>
 			<p>Regra pra passar pra próxima fase:<br>
-			Atingir 80 pontos</p>
+			Atingir no mínimo 80 pontos</p>
 			<br><br><br>
 			
 		  
