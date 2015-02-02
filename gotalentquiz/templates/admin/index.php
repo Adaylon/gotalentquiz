@@ -9,7 +9,7 @@ include'header.php';
               <div id="ajaxupdater" class="alert"></div>
           <h4>Bem vindo Quizmaster!</h4>
           <p>Seja cuidadoso; com grandes poderes vem a grande responsabilidade</p>
-          <h4>Quizzes</h4>
+          <h4>Quizzes - <a href="ranking/">Gerenciar Pontuação Geral</a></h4>
           <?php if (count($quizzes) > 0): ?>
             <table id="quizzes" class="table table-striped">
                 <thead>

@@ -43,6 +43,15 @@ $app->get('/admin/', $authenticate($app, true), function () use ($app) {
     $app->render('admin/index.php', array('quizzes' => $quizzes, 'categories' => $categories));
 });
 
+$app->get('/admin/ranking/', $authenticate($app, true), function () use ($app) {
+    
+    $simple = $app->simple;
+    $quizzes = $simple->getQuizzes(false);
+    $categories = $simple->getCategories(false);
+
+    $app->render('admin/pontuacao.php', array('quizzes' => $quizzes, 'categories' => $categories));
+});
+
 $app->post("/admin/quiz/", $authenticate($app, true), function() use ($app) {
     
     $quizmeta = array();
