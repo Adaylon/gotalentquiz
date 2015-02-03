@@ -8,24 +8,7 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Alternar</button>
           </p>
           <div class="jumbotron">
-			<h1 class="principal">Iron Geek by Go Talent</h1>
-			
-			<!-- PARTE 1 -->
-			<h2>Programação do dia</h2>
-			<p> &bull; Nível Fácil : Programar uma versão de Olá Mundo em  HTML5, trocando o nome por Olá Lua e 
-			incluir um foguete decolando - Submeter para avaliação até ao final do dia 
-			em algum e-mail especificado;</p> 
-			<p> &bull; Nível Médio - Decifrar código encriptados - Qr Code escondidos em algum material 
-			publicitário nos palcos, no Qr Code metade de um texto sobre inovação e o endereço de 
-			e-mail para submeter o texto e uma dica para atividade extra;</p>
-			<p> &bull; Nível Difícil : Programar um app para se orientar com base nas estrelas e conseguir o maior número 
-			de downloads - Subir o app em algum repositório e enviar o link para 
-			acompanharmos o número de downloads;</p>
-			<p> &bull; Nível Extra : Encontrar o Qr Code escondido em uma postagem no blog da GoTalent - O 
-			Qr Code contêm a segunda parte do texto sobre inovação e o endereço de e-mail para 
-			submeter o texto completo.</p>
-			
-			
+			<h1 class="principal">Quiz by Go Talent</h1>			
 		  
 			<!-- PARTE 2 -->
 			<h2>E no final o que eu ganho com isso?</h2>
@@ -38,14 +21,6 @@
 			<tr>
 				<td ALIGN=MIDDLE>1º</td>
 				<td><img height='21px' src='<?=$root?>/images/macbookair.png' style='float:right'/>  Mac Book Air</td>				
-			</tr>
-			<tr>
-				<td ALIGN=MIDDLE>2º</td>
-				<td><img height='21px' src='<?=$root?>/images/iphone.png' style='float:right'/> Iphone 6</td>				
-			</tr>
-			<tr>
-				<td ALIGN=MIDDLE>3º</td>
-				<td><img height='21px' src='<?=$root?>/images/laugh.png' style='float:right'/> O direito de dizer que quase ganhou</td>				
 			</tr>
 			</tbody>
 			</table>
@@ -91,21 +66,20 @@
 			</tbody>
 			</table>
 			</ul>
-          </div>
-		  
-					  
-			<!-- PARTE 4 -->
+
+			<!-- PARTE 4	 -->
 			<h2>Regras</h2>
-			<p>Nível de Provas e Pontos:<br>
-			Fácil: 30<br>
-			Médio: 60<br>
-			Difícil: 90<br>
-			Extra: 20</p><br>
-			<p>Regra pra passar pra próxima fase:<br>
-			Atingir no mínimo 80 pontos</p>
-			<br><br><br>
 			
-		  
+			<li><p class="list-group-item-text">O participante deve estar credenciado no site Quiz by Go Talent.</p></li>
+			<li><p class="list-group-item-text">Serão 4 Quizzes com 25 questões cada.</p></li>
+			<li><p class="list-group-item-text">O 1º Quiz será iniciado na quarta-feira dia 04/02/15 a 00:00 e será encerrado as 23:59.</p></li>
+			<li><p class="list-group-item-text">O 2º Quiz será iniciado na quinta-feira dia 05/02/15 a 00:00 e será encerrado as 23:59.</p></li>
+			<li><p class="list-group-item-text">O 3º Quiz será iniciado na sexta-feira dia 06/02/15 a 00:00 e será encerrado as 23:59.</p></li>
+			<li><p class="list-group-item-text">O 4º Quiz será iniciado no sábado dia 07/02/15 a 00:00 e será encerrado as 10:30 no palco Crossespace.</p></li>
+			<li><p class="list-group-item-text">Para receber o prêmio, o participante ganhador deverá estar presenta na palestra as 10:30 no palco Crossespace.</p></li>
+			<br /><br />
+
+          </div>		  
         </div><!--/span-->
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">

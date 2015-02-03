@@ -2,8 +2,9 @@
 //echo '<pre>';
 //print_r($_SESSION);
 //echo '</pre>';
-$title = 'Iron Geek';
-?><!DOCTYPE html>
+$title = 'Quiz Go Talent';
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

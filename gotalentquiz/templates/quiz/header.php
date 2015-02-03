@@ -2,7 +2,7 @@
 //echo '<pre>';
 //print_r($_SESSION);
 //echo '</pre>';
-$title = 'Iron Geek';
+$title = 'Quiz Go Talent';
 ?>
 <!DOCTYPE html>
 <html>
