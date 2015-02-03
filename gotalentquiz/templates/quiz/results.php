@@ -7,49 +7,11 @@
                 <?php else: ?>
                     <h2>Resultados:</h2>
                 <?php endif; ?>
+                 <p><a href="http://gotalent.com.br/quiz">Voltar para a página principal e acompanhar o ranking</a></p>
             <?php
             $x = 1;
             $numquestions = $quiz->countQuestions();
-            foreach ($quiz->getAllAnswersGroupedByQuestion() as $answergroup) :
-                if ($x % 2 !== 0) { echo '<div style="clear:both"></div>';}
-                echo '<div class="col-md-6 clearfix">';
-                echo '<h4>Questão: ' . ($x) . ': ' . $quiz->getQuestion($x)->getText() . '</h4>';
-                echo '<ol>' . PHP_EOL;
-                    $y = 0;
-                    foreach( $answergroup as $answer) :
-                        if (isset($_SESSION['correct'][$x])):
-                            //first in array(correct by default) AND chosen by user
-                            if ( ($y === 0) && ( in_array( $answer, $_SESSION['correct'][$x]) ) ) :
-                                echo '<li class="correctuser">'. $answer. ' (Correct!)</li>' . PHP_EOL;
-                            //correct but not chosen by user
-                            elseif ($y === 0) :
-                                echo '<li class="correct">' . $answer . '</li>'  . PHP_EOL;
-                            //wrong, not chosen by user
-                            else :
-                                echo "<li>$answer</li>\n";
-                            endif;
-                           
-                            //wrong AND chosen by user
-                        else :
-                            if ( in_array( $answer, $_SESSION['wrong'][$x])) :
-                                echo '<li class="wrong">' . $answer . ' (Woops!)</li>' . PHP_EOL;
-                            //correct but not chosen by user
-                            elseif ($y === 0) :
-                                echo '<li class="correct">' . $answer . '</li>'  . PHP_EOL;
-                            //wrong, not chosen by user
-                            else :
-                                echo "<li>$answer</li>\n";
-                            endif;
-                        endif;
-                        
-                         $y++;
-                    endforeach;
-                echo '</ol>';
-                echo '</div>';
-             
-                //move on to next set of answers
-                $x++;
-            endforeach; ?>
+            ?>
             </div>
             <div class="col-md-3">   
                 <h2>Ranking</h2>

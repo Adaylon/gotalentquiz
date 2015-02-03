@@ -72,11 +72,11 @@
 			
 			<li><p class="list-group-item-text">O participante deve estar credenciado no site Quiz by Go Talent.</p></li>
 			<li><p class="list-group-item-text">Serão 4 Quizzes com 25 questões cada.</p></li>
-			<li><p class="list-group-item-text">O 1º Quiz será iniciado na quarta-feira dia 04/02/15 a 00:00 e será encerrado as 23:59.</p></li>
-			<li><p class="list-group-item-text">O 2º Quiz será iniciado na quinta-feira dia 05/02/15 a 00:00 e será encerrado as 23:59.</p></li>
-			<li><p class="list-group-item-text">O 3º Quiz será iniciado na sexta-feira dia 06/02/15 a 00:00 e será encerrado as 23:59.</p></li>
-			<li><p class="list-group-item-text">O 4º Quiz será iniciado no sábado dia 07/02/15 a 00:00 e será encerrado as 10:30 no palco Crossespace.</p></li>
-			<li><p class="list-group-item-text">Para receber o prêmio, o participante ganhador deverá estar presenta na palestra as 10:30 no palco Crossespace.</p></li>
+			<li><p class="list-group-item-text">O 1º Quiz será iniciado na quarta-feira dia 04/02/15 à 00:00 e será encerrado às 23:59.</p></li>
+			<li><p class="list-group-item-text">O 2º Quiz será iniciado na quinta-feira dia 05/02/15 à 00:00 e será encerrado às 23:59.</p></li>
+			<li><p class="list-group-item-text">O 3º Quiz será iniciado na sexta-feira dia 06/02/15 à 00:00 e será encerrado às 23:59.</p></li>
+			<li><p class="list-group-item-text">O 4º Quiz será iniciado no sábado dia 07/02/15 à 00:00 e será encerrado às 10:30 no palco Crossespace.</p></li>
+			<li><p class="list-group-item-text">Para receber o prêmio, o participante ganhador deverá estar presente na palestra às 10:30 no palco CROSS SPACE.</p></li>
 			<br /><br />
 
           </div>		  

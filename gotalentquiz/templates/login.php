@@ -56,7 +56,7 @@
                 </form>
                 <form style="display: none" id="register-form" class="form-signin" method="post" action="<?php echo $root;
                 ?>/register">
-                    <input type="text" name="username" class="form-control" placeholder="Username">
+                    <input type="text" name="username" class="form-control" placeholder="Nickname">
                     <input type="email" name="email" class="form-control" placeholder="Email">
 					<input type="text" name="idcampuseiro" class="form-control" placeholder="Id Campuseiro">
                     <input type="password" name="regpassword" class="form-control" placeholder="Password">

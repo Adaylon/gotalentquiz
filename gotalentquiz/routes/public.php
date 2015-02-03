@@ -53,7 +53,7 @@ $app->post('/login/', function () use ($app) {
     {
         if (! filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            $errors['loginerror'] = "The email address was invalid. Please try again.";
+            $errors['loginerror'] = "O endereço de e-mail inválido. Por favor, tente novamente.";
         }
         else
         {
@@ -64,7 +64,7 @@ $app->post('/login/', function () use ($app) {
                 //verify the password against hash
                 if (! password_verify($password, $authsql->pass))
                 {
-                    $errors['loginerror'] = "The email or password do not match those in our system. Please try again.";
+                    $errors['loginerror'] = "O e-mail ou senha não coincidem com aqueles em nosso sistema. Por favor, tente novamente.";
                 }
                 else
                 {
@@ -87,13 +87,13 @@ $app->post('/login/', function () use ($app) {
             }
             else
             {
-                $errors['loginerror'] = "The email or password do not match those in our system. Please try again.";
+                $errors['loginerror'] = "O e-mail ou senha não coincidem com aqueles em nosso sistema. Por favor, tente novamente.";
             }
         }
     }
     else
     {
-        $errors['loginerror'] = "Please check your email address and password and try again.";
+        $errors['loginerror'] = "Por favor, verifique o seu endereço de e-mail e senha e tente novamente.";
     }
 
     if (count($errors) > 0)
@@ -123,7 +123,7 @@ $app->post('/register/', function () use ($app) {
     {
         if (! filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            $errors['registererror'] = "The email address was invalid. Please try again.";
+            $errors['registererror'] = "O endereço de e-mail inválido. Por favor, tente novamente.";
         }
         else
         {
@@ -144,7 +144,7 @@ $app->post('/register/', function () use ($app) {
     }
     else
     {
-        $errors['registererror'] = "There was an error with your username or password. Please try again.";
+        $errors['registererror'] = "Houve um erro com seu nome de usuário ou senha. Por favor, tente novamente.";
     }
 
     if (count($errors) > 0)
@@ -222,7 +222,7 @@ $app->get('/quiz/:id/', function ($id) use ($app) {
 
         $app->render('quiz/quiz.php', array('quiz' => $quiz, 'categories' => $categories, 'session' => $session, 'error' => $error));
     } else {
-        $app->flashnow('quizerror','There has been an error. Please return to the main quiz menu and try again');
+        $app->flashnow('quizerror','Ocorreu um erro . Por favor, retorne ao menu principal tente novamente');
         $app->render('quiz/error.php', array( 'categories' => $categories,'session' => $session));
     }
 })->conditions(array('id' => '\d+'));
@@ -317,7 +317,7 @@ $app->post('/quiz/process/', $authenticate($app), function () use ($app) {
             $app->redirect($app->request->getRootUri() . '/quiz/' . $id . '/test');
         } else
         {
-            $app->flashnow('quizerror', 'There has been an error. Please return to the main quiz menu and try again');
+            $app->flashnow('quizerror', 'Ocorreu um erro . Por favor, retorne ao menu principal tente novamente');
             $app->render('quiz/error.php', array('categories' => $categories, 'session' => $session));
         }
     }
@@ -331,7 +331,7 @@ $app->get('/quiz/:id/test/', $authenticate($app), function ($id) use ($app) {
     $categories = $simple->getCategories();
 
     if ( $session->get('quizid') !== $id) {
-        $app->flashnow('quizerror','There has been an error. Please return to the main quiz menu and try again');
+        $app->flashnow('quizerror','Ocorreu um erro . Por favor, retorne ao menu principal e tente novamente');
         $app->render('quiz/error.php', array( 'categories' => $categories,'session' => $session));
         $app->stop();
     }
@@ -376,7 +376,7 @@ $app->get('/quiz/:id/test/', $authenticate($app), function ($id) use ($app) {
 
         $app->render('quiz/test.php', array('quiz' => $quiz, 'num' => $num, 'nonce' => $nonce, 'timetaken' => $timetaken, 'categories' => $categories, 'session' => $session));
     } else {
-        $app->flashnow('quizerror','The quiz you have selected does not exist. Return to the main menu to try again');
+        $app->flashnow('quizerror','O teste que você selecionou não existe. Volte ao menu principal para tentar novamente.');
         $app->render('quiz/error.php', array( 'categories' => $categories,'session' => $session));
         $app->stop();
     }
@@ -396,7 +396,7 @@ $app->get('/quiz/:id/results/', function ($id) use ($app) {
     }
 
     if ($session->get('quizid') !== $id) {
-        $app->flashnow('quizerror','There has been an error. Please return to the main quiz menu and try again');
+        $app->flashnow('quizerror','Ocorreu um erro . Por favor, retorne ao menu principal e tente novamente.');
         $app->render('quiz/error.php', array('quiz' => $quiz, 'categories' => $categories, 'session' => $session));
         $app->stop();
     }
@@ -408,7 +408,7 @@ $app->get('/quiz/:id/results/', function ($id) use ($app) {
 
         $app->render('quiz/results.php', array('quiz' => $quiz, 'categories' => $categories, 'session' => $session));
     } else {
-        $app->flashnow('quizerror','The quiz you have selected does not exist. Return to the main menu to try again');
+        $app->flashnow('quizerror','O teste que você selecionou não existe. Volte ao menu principal para tentar novamente.');
         $app->render('quiz/error.php', array('quiz' => $quiz, 'categories' => $categories, 'session' => $session));
         $app->stop();
     }

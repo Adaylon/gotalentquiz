@@ -51,7 +51,7 @@ $title = 'Quiz Go Talent';
                       <li><a href="<?php echo $root; ?>/admin/">Admin</a></li>
                   <?php endif; ?>
               <?php else : ?>
-                  <li><a href="<?php echo $root; ?>/login/">Login</a></li>
+                  <li><a href="<?php echo $root; ?>/login/">Credenciamento / Login</a></li>
               <?php endif; ?>
           </ul>
             <?php if ($user) : ?>
