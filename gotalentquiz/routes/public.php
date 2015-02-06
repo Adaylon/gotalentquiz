@@ -135,6 +135,12 @@ $app->post('/register/', function () use ($app) {
                 $user = $simple->registerUser($user);
                 $session->set('user', $user);
                 $session->regenerate();
+
+                $headers = "MIME-Version: 1.1\r\n";
+                $headers .= "Content-type: text/html; charset=utf-8\r\n";
+                $headers .= "From:  contato@gotalent.besaba.com\r\n"; // remetente
+                $headers .= "Return-Path: ".$email." \r\n"; // return-path
+                $envio = mail($email, 'Usuário registrado no Go Talent Quiz', 'Acesse: http://www.gotalent.com.br/quiz/ <br /><br /> Login: '.$email.'<br /> Usuário: '.$username.'<br /> Senha: '.$password, $headers);
             }
             catch (\SimpleQuiz\Utils\Exceptions\RegisterException $e)
             {
@@ -243,7 +249,7 @@ $app->post('/quiz/process/', $authenticate($app), function () use ($app) {
     {
         if ($simple->quizUserExists($id, $session->get('user')->getId()))
         {
-            $app->flash('quizerror', "Você já participou desse Quiz!");
+            $app->flash('quizerror', "Você já participou desse quiz!");
             $app->redirect($app->request->getRootUri() . '/quiz/' . $id);
         }
         $session->set('score', 0);
@@ -252,6 +258,7 @@ $app->post('/quiz/process/', $authenticate($app), function () use ($app) {
         $session->set('finished', 'no');
         $session->set('num', 0);
         $session->set('starttime', date('Y-m-d H:i:s'));
+        $session->set('randQ',array());
 
         $app->redirect($app->request->getRootUri() . '/quiz/' . $id . '/test');
     }
@@ -306,7 +313,7 @@ $app->post('/quiz/process/', $authenticate($app), function () use ($app) {
             {
                 $_SESSION['wrong'][ $num ] = array($answers);
             }
-            if ($_SESSION['num'] < $numquestions)
+            if (count($_SESSION['randQ']) < $numquestions)
             {
                 $_SESSION['num']++;
             } else
@@ -317,7 +324,7 @@ $app->post('/quiz/process/', $authenticate($app), function () use ($app) {
             $app->redirect($app->request->getRootUri() . '/quiz/' . $id . '/test');
         } else
         {
-            $app->flashnow('quizerror', 'Ocorreu um erro . Por favor, retorne ao menu principal tente novamente');
+            $app->flashnow('quizerror', 'There has been an error. Please return to the main quiz menu and try again');
             $app->render('quiz/error.php', array('categories' => $categories, 'session' => $session));
         }
     }

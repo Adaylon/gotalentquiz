@@ -47,34 +47,13 @@
                   </form>
               </div>
           </div>
-        
-		<h2>Ranking Geral</h2>
-        <ul class="leaders">
-        <table width="20%" border="1">
-		<tr>
-			<th><span>NOME</span></th>
-			<th><span>PONTOS</span></th>
-			<th><span>TEMPO TOTAL</span></th>
-		</tr>
-		<tbody>
-			<?php 
-			include "userQuiz.php";
-			$p = new UserQuiz;
-			$c = $p->getRankingFull();
-			while($row = mysql_fetch_array($c))
-			{
-				echo "<tr>";
-				echo "<td>".$row[0]."</td>";
-				echo "<td>".$row[1]."</td>";
-				echo "<td>".$row[2]."</td>";
-				echo "</tr>";
-			}
-			?>
-		</tbody>
-		</table>
-        </ul>
 		
       </div><!-- /.row -->
         
     </div><!--container-->
 <?php include 'footer.php'; ?>
+<script type="text/javascript">
+<!--
+alert("Atenção Campuseiro, estamos chegando ao final da nossa competição. \n Você achou que seria fácil ganhar o Macbook Air né? \n Agora a dificuldade das questões aumentam e as opções são randômicas.\n Divirta-se e fique atento no nosso Twitter: PortalGoTalent que na reta final terão provas relâmpagos com pontos extras para o Quiz!");
+//-->
+</script>
